@@ -1,0 +1,13 @@
+*
+
+!*.pbs
+!*.sh
+
+*.vs.*
+
+!*README*
+!.gitignore
+
+*.faa
+
+*~
