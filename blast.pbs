@@ -1,0 +1,2 @@
+
+blastp -query xxx -db path/to/xxx -output '6 qseqid sseqid evalue' 
