@@ -1,13 +1,5 @@
 #!/bin/bash
-#PBS -l nodes=1:ppn=16
-#PBS -l walltime=00:05:00
-#PBS -o Glycine_max.vs.TARGET_output
-#PBS -e Glycine_max.vs.TARGET_error
-
-set -u
-
-cd $PBS_O_WORKDIR
-
+   
 for database in *.db
 do                                                                             
      blastp -query Glycine_max.faa -db $database/$database -out GM_$database.txt -outfmt '6 qseqid sseqid evalue'
