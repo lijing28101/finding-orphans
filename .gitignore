@@ -3,6 +3,8 @@
 !*.pbs
 !*.sh
 
+*faa*
+
 *.vs.*
 
 !*README*
