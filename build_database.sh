@@ -1,6 +1,7 @@
 #!/bin/bash
 
-# TODO import blast module
+# import BLAST module
+module load LAS/ncbi-blast/2.4.0+
 
 for protein in *.$1
 do
