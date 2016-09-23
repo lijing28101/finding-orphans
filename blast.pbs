@@ -6,9 +6,19 @@
 
 set -u
 
+# TODO import BLAST module
+
 cd $PBS_O_WORKDIR
 
 for database in *.db
 do                                                                             
-     blastp -query Glycine_max.faa -db $database/$database -out GM_$database.txt -outfmt '6 qseqid sseqid evalue'
+    outfile=GM_$database.txt
+    echo 'qseqid sseqid evalue bitscore qstart qend sstart send' > $outfile
+     blastp \
+        -query Glycine_max.faa \
+        -db $database/$database \
+        -num_threads 2 \
+        -outfmt '6 qseqid sseqid evalue bitscore qstart qend sstart send' >> $outfile &
 done
+
+wait
