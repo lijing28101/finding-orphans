@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for j in protein-sequences/*.faa
+for j in protein_sequences/*.faa
 do
     echo =====================================================
     echo $j
