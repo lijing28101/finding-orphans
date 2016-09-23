@@ -1,5 +1,5 @@
 all:
-	for j in protein_database/*db; do ./prepare-blast-pbs-scripts.sh `basename $j` blast.pbs; done
+	./make-scripts.sh	
 
 .PHONY: archive
 archive:
@@ -16,3 +16,9 @@ clean:
 .PHONY: run
 run:
 	qsub *.db*pbs
+
+.PHONY: test
+test:
+	qsub Cic*pbs
+	sleep 1
+	qstat -u jingli

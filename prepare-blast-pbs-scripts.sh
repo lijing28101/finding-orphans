@@ -2,7 +2,7 @@
 
 set -u
 
-database=$1
+target=$1
 script=$2
 
-sed "s/DATABASE/$database/g" < $script > ${database}-$script
+sed "s/TARGET/$target/g" < $script > ${target}-$script
