@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# TODO import blast module
+
 for protein in *.$1
 do
    mkdir $protein.db
