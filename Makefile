@@ -1,5 +1,5 @@
 all:
-	./make-scripts.sh	
+	./make-scripts.sh
 
 .PHONY: archive
 archive:
@@ -22,3 +22,5 @@ test:
 	qsub Cic*pbs
 	sleep 1
 	qstat -u jingli
+
+# add a remove archive command
